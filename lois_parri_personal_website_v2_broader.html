@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Personal academic website for Lois Ann Parri, PhD student in Psychology at the University of Cambridge." />
+  <title>Lois Ann Parri | Psychology PhD Student</title>
+
+  <style>
+    :root {
+      --bg: #fbf7f0;
+      --card: #fffdf9;
+      --ink: #2f2824;
+      --muted: #70645e;
+      --accent: #8a4b38;
+      --accent-dark: #5f3126;
+      --sage: #53685a;
+      --line: #eadfd6;
+      --soft: #f3e8df;
+      --soft-green: #e9eee8;
+      --max-width: 1120px;
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at top left, rgba(138, 75, 56, 0.12), transparent 32rem),
+        radial-gradient(circle at top right, rgba(83, 104, 90, 0.14), transparent 30rem),
+        var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(251, 247, 240, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 15px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+    }
+
+    .hero {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 74px 22px 48px;
+      display: grid;
+      grid-template-columns: 1.28fr 0.72fr;
+      gap: 38px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    h1, h2, h3 { line-height: 1.12; margin: 0; }
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 5.8rem);
+      letter-spacing: -0.06em;
+      max-width: 870px;
+    }
+
+    .subtitle {
+      font-size: clamp(1.08rem, 2vw, 1.35rem);
+      color: var(--muted);
+      max-width: 740px;
+      margin: 24px 0 0;
+    }
+
+    .hero-actions {
+      margin-top: 30px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-family: Arial, sans-serif;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      font-weight: 700;
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--accent-dark);
+    }
+
+    .profile-card {
+      background: rgba(255, 253, 249, 0.88);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: 0 18px 50px rgba(95, 49, 38, 0.08);
+    }
+
+    .profile-card h2 {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+    }
+
+    .profile-card p {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+
+    .quick-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      font-family: Arial, sans-serif;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .quick-list strong {
+      color: var(--ink);
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 22px 76px;
+    }
+
+    section {
+      padding: 54px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 0.32fr 1fr;
+      gap: 28px;
+      margin-bottom: 30px;
+      align-items: start;
+    }
+
+    .section-number {
+      font-family: Arial, sans-serif;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.76rem;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      letter-spacing: -0.04em;
+    }
+
+    .lead {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 780px;
+      margin: 16px 0 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: rgba(255, 253, 249, 0.92);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+
+    .card.green {
+      background: var(--soft-green);
+      border-color: #d8e1d7;
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+    }
+
+    .card ul {
+      padding-left: 18px;
+      margin: 12px 0 0;
+    }
+
+    .meta {
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      background: var(--soft);
+      color: var(--accent-dark);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .tag.green {
+      background: var(--soft-green);
+      color: var(--sage);
+      border-color: #d8e1d7;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 16px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 18px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .timeline-item:last-child { border-bottom: none; }
+
+    .timeline-date {
+      font-family: Arial, sans-serif;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.86rem;
+    }
+
+    .timeline-content h3 {
+      margin-bottom: 6px;
+    }
+
+    .timeline-content p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .publication {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .publication:last-child { border-bottom: none; }
+
+    .publication-title {
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .publication-details {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .statement {
+      background: var(--ink);
+      color: #fffaf4;
+      border-radius: calc(var(--radius) + 8px);
+      padding: 38px;
+    }
+
+    .statement h2 { color: #fffaf4; }
+
+    .statement p {
+      color: #efe2d8;
+      max-width: 850px;
+      margin: 16px 0 0;
+      font-size: 1.12rem;
+    }
+
+    .contact-box {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: calc(var(--radius) + 8px);
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 26px;
+      align-items: center;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      margin: 14px 0 0;
+      max-width: 720px;
+    }
+
+    footer {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 26px 22px 48px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 880px) {
+      .hero,
+      .section-heading,
+      .two-column,
+      .contact-box,
+      .timeline-item {
+        grid-template-columns: 1fr;
+      }
+
+      .grid { grid-template-columns: 1fr; }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links { justify-content: flex-start; }
+
+      .hero { padding-top: 48px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#top" class="logo">Lois Ann Parri</a>
+      <div class="nav-links">
+        <a href="#themes">Themes</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#outputs">Outputs</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div id="top" class="hero">
+    <div>
+      <div class="eyebrow">Psychology PhD Student · University of Cambridge</div>
+      <h1>Psychology, methods, and research that works in the real world.</h1>
+      <p class="subtitle">
+        I am a psychology PhD student interested in how people learn, adapt, communicate, and engage with research. My current doctoral work examines individual differences in adolescent additional-language learning, alongside broader interests in mental health, evidence synthesis, research delivery, public involvement, and creative dissemination.
+      </p>
+      <div class="hero-actions">
+        <a class="button primary" href="#themes">Explore my work</a>
+        <a class="button secondary" href="#skills">What I bring to projects</a>
+        <a class="button secondary" href="mailto:YOUR.EMAIL@EXAMPLE.COM">Email me</a>
+      </div>
+    </div>
+
+    <aside class="profile-card" aria-label="Profile summary">
+      <h2>Hello, I’m Lois.</h2>
+      <p>
+        I am based in Cambridge, UK, and funded by the ESRC CAM-DTP for my PhD in Psychology.
+      </p>
+      <ul class="quick-list">
+        <li><strong>Current role:</strong> PhD student in Psychology</li>
+        <li><strong>Background:</strong> clinical and health psychology, psychosis research, digital mental health</li>
+        <li><strong>Methods:</strong> qualitative, quantitative, systematic review and meta-analysis</li>
+        <li><strong>Languages:</strong> fluent Welsh and English</li>
+      </ul>
+      <div class="tag-list">
+        <span class="tag">Psychology</span>
+        <span class="tag">Methods</span>
+        <span class="tag">PPI</span>
+        <span class="tag">Research coordination</span>
+        <span class="tag">Creative dissemination</span>
+      </div>
+    </aside>
+  </div>
+
+  <main>
+    <section id="themes">
+      <div class="section-heading">
+        <div class="section-number">01 · Themes</div>
+        <div>
+          <h2>Research interests</h2>
+          <p class="lead">
+            I work across several linked areas rather than one narrow topic: how people think, learn, experience mental health, and participate in research — and how research can be designed, delivered, synthesised, and communicated well.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <div class="meta">Learning & development</div>
+          <h3>Individual differences</h3>
+          <p>
+            My PhD uses adolescent additional-language learning as a way to understand why people differ in learning outcomes, and how cognitive, linguistic, educational, and environmental factors shape those differences.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="meta">Mental health</div>
+          <h3>Clinical and digital psychology</h3>
+          <p>
+            My previous work has focused on psychosis, cognitive remediation, relapse prediction, digital mental health tools, and the acceptability of remote psychological interventions.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="meta">Research practice</div>
+          <h3>Methods, synthesis, and delivery</h3>
+          <p>
+            I am interested in rigorous and usable research: systematic reviews, meta-analysis, qualitative interviewing, participant engagement, project coordination, and research that can be implemented beyond papers.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="statement" aria-label="Professional statement">
+      <div class="eyebrow">Working identity</div>
+      <h2>Not just “language learning.”</h2>
+      <p>
+        My current PhD topic is language learning, but the broader thread in my work is psychological research that connects individual experience, evidence, and practice. I am especially interested in roles where I can combine research methods, coordination, participant-facing work, public involvement, and thoughtful dissemination.
+      </p>
+    </section>
+
+    <section id="projects">
+      <div class="section-heading">
+        <div class="section-number">02 · Projects</div>
+        <div>
+          <h2>Selected projects</h2>
+          <p class="lead">
+            A small set of projects showing the range of my research experience, from adolescent learning to psychosis research, public involvement, digital health, and community-led language work.
+          </p>
+        </div>
+      </div>
+
+      <div class="two-column">
+        <article class="card">
+          <div class="meta">PhD · University of Cambridge</div>
+          <h3>Individual differences in adolescent language learning</h3>
+          <p>
+            Investigating internal and external predictors of additional-language attainment during adolescence, using evidence synthesis and empirical methods.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="meta">King’s College London</div>
+          <h3>CONNECT Digital Study</h3>
+          <p>
+            Supported a digital study using devices such as smartphones and smartwatches to help predict relapse in psychosis, including participant engagement, assessments, check-ins, and relapse assessments.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="meta">Remote cognitive remediation</div>
+          <h3>Acceptability of remote psychological intervention</h3>
+          <p>
+            Recruited participants, conducted semi-structured interviews, completed reflexive thematic analysis, led service-user advisory panels, and contributed to publication and dissemination.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="meta">Community & language</div>
+          <h3>Welsh language and lived experience</h3>
+          <p>
+            Supported community-led and minority-language research, including work connected to Welsh language, belonging, dissemination, and lived-experience methods.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-heading">
+        <div class="section-number">03 · Skills</div>
+        <div>
+          <h2>What I bring to projects</h2>
+          <p class="lead">
+            This section is deliberately broader than a CV. It helps collaborators, supervisors, labs, and future employers quickly understand the kinds of work I can contribute to.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <article class="card green">
+          <h3>Research coordination</h3>
+          <p>
+            Participant recruitment, study administration, assessment scheduling, check-ins, documentation, adverse event reporting, and multi-stakeholder communication.
+          </p>
+        </article>
+
+        <article class="card green">
+          <h3>Evidence synthesis</h3>
+          <p>
+            Systematic reviewing, screening, extraction, risk of bias work, synthesis planning, meta-analysis, and translating scattered evidence into usable summaries.
+          </p>
+        </article>
+
+        <article class="card green">
+          <h3>Qualitative research</h3>
+          <p>
+            Semi-structured interviewing, reflexive thematic analysis, patient-centred research, cognitive debriefing, and concept elaboration.
+          </p>
+        </article>
+
+        <article class="card green">
+          <h3>Data and analysis</h3>
+          <p>
+            Quantitative analysis, data cleaning, review tools, research databases, and developing transparent workflows for complex datasets.
+          </p>
+        </article>
+
+        <article class="card green">
+          <h3>PPI and lived experience</h3>
+          <p>
+            Designing and facilitating advisory panels, integrating service-user perspectives, and developing research materials that are accessible and respectful.
+          </p>
+        </article>
+
+        <article class="card green">
+          <h3>Dissemination</h3>
+          <p>
+            Academic writing, non-academic communication, presentations, public-facing resources, visual/creative approaches, and bilingual communication.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="outputs">
+      <div class="section-heading">
+        <div class="section-number">04 · Outputs</div>
+        <div>
+          <h2>Publications and outputs</h2>
+          <p class="lead">
+            Add DOI, Google Scholar, ORCID, OSF, slides, posters, and media links as they become available.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <article class="publication">
+          <div class="publication-title">Evaluating remote delivery of cognitive remediation in people with psychosis.</div>
+          <p class="publication-details">Cella, M., Parri, L., Wang, K., Quinn, R., Oyeleye, O., Jin, H., & Wykes, T. Schizophrenia Research.</p>
+        </article>
+
+        <article class="publication">
+          <div class="publication-title">Understanding psychosis complexity through a syndemic framework: A systematic review.</div>
+          <p class="publication-details">Zahid, U., Lawrence, E. G., de Freitas, D. F., Parri, L. A., Quadros, W., Hua, P., ... & Bhui, K. Neuroscience & Biobehavioral Reviews.</p>
+        </article>
+
+        <article class="publication">
+          <div class="publication-title">Evaluating the acceptability of remote cognitive remediation from the perspective of psychosis service users.</div>
+          <p class="publication-details">Parri, L. A., Barret, K., Hill, R., Hoque, A., Isok, I., Kenny, A., ... & Cella, M. Behavioural and Cognitive Psychotherapy.</p>
+        </article>
+
+        <article class="publication">
+          <div class="publication-title">“Anorexia-lite”: the dangers of weight classification in diagnosis.</div>
+          <p class="publication-details">Lewin, C., Parri, L., & Hudson, G. The Lancet Psychiatry.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="timeline">
+      <div class="section-heading">
+        <div class="section-number">05 · Timeline</div>
+        <div>
+          <h2>Current and recent work</h2>
+          <p class="lead">
+            A timeline makes the website feel active without needing a full blog. Keep this light: conference talks, media, papers, projects, teaching, awards, and major research milestones.
+          </p>
+        </div>
+      </div>
+
+      <div class="card timeline">
+        <article class="timeline-item">
+          <div class="timeline-date">2025–present</div>
+          <div class="timeline-content">
+            <h3>PhD in Psychology, University of Cambridge</h3>
+            <p>ESRC CAM-DTP funded doctoral research on individual differences in adolescent additional-language learning.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-date">2024–2025</div>
+          <div class="timeline-content">
+            <h3>Psychology, mental health, and evidence synthesis</h3>
+            <p>Research assistant work across psychosis relapse prediction, remote cognitive remediation, systematic review, and digital mental health projects.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-date">Add soon</div>
+          <div class="timeline-content">
+            <h3>Talks, media, posters, and resources</h3>
+            <p>Add BBC Radio Cymru, conference posters, public talks, teaching, workshops, and downloadable resources here.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="open">
+      <div class="section-heading">
+        <div class="section-number">06 · Open research</div>
+        <div>
+          <h2>Open, useful, and accessible research</h2>
+          <p class="lead">
+            As my PhD develops, I plan to use this space to share links to open materials where possible: preregistrations, protocols, code, posters, slides, public summaries, and resources for participants or collaborators.
+          </p>
+        </div>
+      </div>
+
+      <div class="two-column">
+        <article class="card">
+          <h3>Resources</h3>
+          <p>
+            Add public-facing explainers, posters, slides, methods notes, or templates here. This is a good place to make your work useful beyond formal publications.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Profiles</h3>
+          <p>
+            Add links to ORCID, Google Scholar, OSF, GitHub, LinkedIn, university profile, and a downloadable PDF CV.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="creative">
+      <div class="section-heading">
+        <div class="section-number">07 · Creative</div>
+        <div>
+          <h2>Creative and bilingual perspectives</h2>
+          <p class="lead">
+            My interests in art, Welsh language, poetry, and creative dissemination shape how I think about research communication, public engagement, and whose voices are included in knowledge-making.
+          </p>
+        </div>
+      </div>
+
+      <div class="two-column">
+        <article class="card">
+          <h3>Arts and research</h3>
+          <p>
+            I enjoy creative work across different media, including modelling materials, custom chess sets, miniatures, and events that bridge psychology, research, and art.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Welsh and English</h3>
+          <p>
+            As a fluent Welsh and English speaker, I am interested in language, belonging, accessibility, and community-led approaches to research.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-box">
+        <div>
+          <h2>Get in touch</h2>
+          <p>
+            I’m open to conversations about psychology research, evidence synthesis, public involvement, research coordination, trial/study delivery, language, mental health, and creative approaches to dissemination.
+          </p>
+        </div>
+        <div>
+          <a class="button primary" href="mailto:YOUR.EMAIL@EXAMPLE.COM">Email me</a>
+        </div>
+      </div>
+
+      <p class="lead" style="font-size: 1rem; margin-top: 20px;">
+        Replace placeholder links before publishing. Do not put your phone number or personal address on a public website.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Lois Ann Parri. Built as a simple one-page academic website.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
