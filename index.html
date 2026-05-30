@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Lois Ann Parri is a Psychology PhD Researcher at the University of Cambridge, working across psychological research, evidence synthesis, PPI, research coordination, and adolescent language learning."
+    content="Lois Ann Parri is a Psychology PhD Researcher at the University of Cambridge, working across psychological research, evidence synthesis, PPIE, research coordination, and adolescent language learning."
   />
   <title>Lois Ann Parri | Psychology PhD Researcher</title>
 
@@ -145,44 +145,51 @@
 
     .section-bg-cream {
       background:
-        radial-gradient(circle at top left, rgba(204, 195, 209, 0.72), transparent 26rem),
-        radial-gradient(circle at top right, rgba(247, 221, 213, 0.9), transparent 24rem),
-        var(--bg);
+        radial-gradient(circle at 12% 0%, rgba(204, 195, 209, 0.46), transparent 26rem),
+        radial-gradient(circle at 92% 10%, rgba(247, 221, 213, 0.62), transparent 24rem),
+        #fbf7ef;
     }
 
     .section-bg-white {
-      background: #fbf7ef;
+      background:
+        radial-gradient(circle at 12% 0%, rgba(247, 221, 213, 0.42), transparent 24rem),
+        #fbf7ef;
     }
 
     .section-bg-peony {
       background:
-        radial-gradient(circle at top right, rgba(204, 195, 209, 0.35), transparent 28rem),
-        var(--peony);
+        radial-gradient(circle at 10% 0%, rgba(216, 164, 175, 0.28), transparent 24rem),
+        radial-gradient(circle at 92% 10%, rgba(204, 195, 209, 0.34), transparent 26rem),
+        linear-gradient(180deg, rgba(247, 221, 213, 0.98), rgba(247, 221, 213, 0.78));
     }
 
     .section-bg-lavender {
       background:
-        radial-gradient(circle at top left, rgba(247, 221, 213, 0.45), transparent 24rem),
-        var(--lavender);
+        radial-gradient(circle at 10% 0%, rgba(247, 221, 213, 0.38), transparent 24rem),
+        radial-gradient(circle at 92% 12%, rgba(216, 164, 175, 0.22), transparent 26rem),
+        linear-gradient(180deg, rgba(204, 195, 209, 0.98), rgba(204, 195, 209, 0.76));
     }
 
     .section-bg-leaf {
-      background: linear-gradient(
-        180deg,
-        rgba(193, 188, 119, 0.92),
-        rgba(193, 188, 119, 0.72)
-      );
+      background:
+        radial-gradient(circle at 12% 0%, rgba(247, 221, 213, 0.26), transparent 24rem),
+        radial-gradient(circle at 92% 8%, rgba(204, 195, 209, 0.20), transparent 26rem),
+        linear-gradient(180deg, rgba(193, 188, 119, 0.92), rgba(193, 188, 119, 0.70));
     }
 
     .section-bg-green {
       background:
-        radial-gradient(circle at 20% 0%, rgba(193, 188, 119, 0.28), transparent 24rem),
+        radial-gradient(circle at 16% 0%, rgba(247, 221, 213, 0.14), transparent 22rem),
+        radial-gradient(circle at 86% 12%, rgba(193, 188, 119, 0.28), transparent 24rem),
         linear-gradient(180deg, var(--grass) 0%, var(--jungle) 100%);
       color: #fffdf8;
     }
 
     .section-bg-rosegreen {
-      background: linear-gradient(180deg, var(--dusty-rose) 0%, var(--jungle) 100%);
+      background:
+        radial-gradient(circle at 18% 0%, rgba(247, 221, 213, 0.26), transparent 22rem),
+        radial-gradient(circle at 86% 12%, rgba(204, 195, 209, 0.12), transparent 24rem),
+        linear-gradient(180deg, var(--dusty-rose) 0%, var(--jungle) 100%);
       color: #fffdf8;
     }
 
@@ -306,10 +313,6 @@
       line-height: 1.5;
     }
 
-    .keep-together {
-  white-space: nowrap;
-}
-
     .meta {
       color: var(--jungle);
       font-size: 0.7rem;
@@ -424,28 +427,19 @@
     }
 
     .card {
-      background: var(--white-soft);
-      border: 1px solid var(--line);
+      background: rgba(255, 252, 248, 0.66);
+      border: 1px solid rgba(67, 56, 61, 0.14);
       border-radius: var(--radius);
       padding: 24px;
     }
 
-    .section-bg-leaf .card,
+    .section-bg-peony .card,
     .section-bg-lavender .card,
-    .section-bg-peony .card {
-      background: rgba(255, 252, 248, 0.62);
-    }
-
-    .card.lavender {
-      background: rgba(204, 195, 209, 0.48);
-    }
-
-    .card.leaf {
-      background: rgba(193, 188, 119, 0.42);
-    }
-
-    .card.rose {
-      background: rgba(216, 164, 175, 0.38);
+    .section-bg-leaf .card,
+    .section-bg-white .card,
+    .section-bg-cream .card {
+      background: rgba(255, 252, 248, 0.64);
+      border-color: rgba(67, 56, 61, 0.13);
     }
 
     .card h3 {
@@ -460,16 +454,17 @@
     .pub-list {
       display: grid;
       gap: 0;
-      background: var(--white-strong);
-      border: 1px solid var(--line);
+      background: rgba(255, 252, 248, 0.64);
+      border: 1px solid rgba(67, 56, 61, 0.13);
       border-radius: var(--radius);
       overflow: hidden;
-      box-shadow: 0 10px 32px rgba(67, 56, 61, 0.06);
+      box-shadow: none;
     }
 
     .pub {
       padding: 22px 24px;
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid rgba(67, 56, 61, 0.12);
+      background: transparent;
     }
 
     .pub:last-child {
@@ -516,24 +511,21 @@
     }
 
     .open-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-      font-family: Arial, sans-serif;
+      margin-top: 14px;
+      margin-bottom: 0;
     }
 
-    .tag {
-      display: inline-flex;
-      border: 1px solid rgba(101, 97, 63, 0.24);
-      border-radius: 999px;
-      padding: 8px 11px;
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-weight: 800;
-      color: var(--jungle);
-      background: rgba(255, 252, 248, 0.42);
+    .open-links a {
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      letter-spacing: normal;
+      text-transform: none;
+      color: inherit;
+      background: none;
+      border: none;
+      border-radius: 0;
+      padding: 0;
     }
 
     footer {
@@ -569,6 +561,10 @@
 
       .hero-side {
         justify-self: start;
+      }
+
+      .hero-title {
+        white-space: normal;
       }
 
       .nav {
@@ -609,13 +605,13 @@
             <h1 class="hero-title">Lois Ann Parri</h1>
 
             <p class="eyebrow">
-              <span class="keep-together">PhD Researcher</span> ·
-              <span class="keep-together">Department of Psychology</span> ·
-              <span class="keep-together">University of Cambridge</span>
+              PhD Researcher<br>
+              Department of Psychology<br>
+              University of Cambridge
             </p>
 
             <p class="hero-copy">
-              I work across psychological research, evidence synthesis, public involvement, and approaches to making research useful beyond academia.
+              I’m a person-centred psychology researcher interested in how people experience and engage with digital tools and interventions. My PhD applies this to developing an adaptive language-learning tool, with a focus on patient and public involvement and engagement (PPIE), accessibility, and real-world usefulness.
             </p>
 
             <div class="hero-actions">
@@ -638,39 +634,25 @@
               <a href="https://www.linkedin.com/in/lois-parri/">LinkedIn</a>
               <a href="https://orcid.org/0000-0002-1042-1867">ORCID</a>
               <a href="https://www.researchgate.net/profile/Lois-Parri-3">ResearchGate</a>
-              <a href="https://osf.io/suh3n/">OSF</a>
-              <a href="https://www.psychol.cam.ac.uk/staff/lois-ann-parri">Cambridge profile</a>
+              <a href="https://www.psychol.cam.ac.uk/staff/lois-ann-parri">Cambridge</a>
             </div>
           </aside>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section section-bg-white">
+    <section id="about" class="section section-bg-green">
       <div class="section-inner">
         <div class="section-head no-margin">
           <div class="kicker">About</div>
 
           <div class="text-panel">
-            <h2>Generalist by instinct, researcher by training.</h2>
-            <p class="lead">
-              I like work that lets me move between ideas, people, methods, and practical delivery. I’m happiest on projects where I can coordinate moving parts, engage with different groups, analyse complex information, and help turn research into something open, transparent, and genuinely useful.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+            <h2>Generalist researcher by experience.</h2>
 
-    <section class="section section-bg-green">
-      <div class="section-inner">
-        <div class="section-head no-margin">
-          <div class="kicker">Approach</div>
-
-          <div class="text-panel">
-            <h2>Range is the point.</h2>
             <p class="lead">
-              My current PhD focuses on individual differences in adolescent additional-language learning, but the broader thread across my work is psychological research that connects evidence, lived experience, and real-world practice. I’m interested in research that is genuinely usable, collaborative, and meaningful beyond academia.
+              I like work that lets me tackle a variety of ideas, people, methods, and practical delivery. I’m happiest on projects where I can coordinate moving parts, engage with different groups, analyse complex information, and help turn research into something open, transparent, and genuinely useful beyond academia.
             </p>
+
           </div>
         </div>
       </div>
@@ -684,14 +666,13 @@
           <div>
             <h2>What I’m working on now</h2>
             <p class="lead">
-              My doctoral work sits within psychology, learning, and research methods, while drawing on my earlier experience in digital mental health, large-scale trials, patient and public involvement (PPI), and study coordination.
+              I like work that lets me tackle a variety of ideas, people, methods, and practical delivery. My PhD uses adolescent additional-language learning as a context for a broader question: how can psychological evidence, lived experience, and PPIE inform digital tools that are usable, engaging, and genuinely accessible? This research sits at the intersection of psychology, learning, evidence synthesis, PPIE, and digital tool development, while drawing on my earlier experience in digital mental health, large-scale trials, and person-centred research.
             </p>
           </div>
         </div>
 
         <div class="grid grid-3">
-          <article class="card lavender">
-            <div class="meta">PhD review</div>
+          <article class="card">
             <h3>Evidence synthesis and meta-analysis</h3>
             <p>
               I am conducting a systematic review and meta-analysis of predictors of adolescent additional-language learning, bringing together evidence from psychology, education, linguistics, and cognitive neuroscience.
@@ -699,63 +680,62 @@
           </article>
 
           <article class="card">
-            <div class="meta">PPI and engagement</div>
             <h3>Adolescent Advisory Group</h3>
             <p>
-              I am running an advisory group with adolescents to help ensure my research is informed by the people it is intended to understand and support.
+              I am running an advisory group of adolescents to ensure my research is informed by the people it is intended to understand and support.
             </p>
           </article>
 
-          <article class="card rose">
-            <div class="meta">Applied research</div>
-            <h3>Pilot adaptive learning programme</h3>
+          <article class="card">
+            <h3>Psychology-led adaptive learning tool</h3>
             <p>
-              I am supporting the development of a pilot adaptive language-learning programme, with an interest in how psychological evidence can inform tools that are practical, engaging, and personalised.
+              I am supporting the development of a pilot adaptive language-learning tool, focusing on how psychological evidence and PPIE can inform digital learning experiences that are practical, engaging, personalised, and accessible.
             </p>
           </article>
+
         </div>
       </div>
     </section>
 
-    <section id="themes" class="section section-bg-cream">
+    <section id="themes" class="section section-bg-lavender">
       <div class="section-inner">
         <div class="section-head">
           <div class="kicker">Research interests</div>
 
           <div>
-            <h2>Rather than one narrow topic, I work across a few connected themes.</h2>
+            <h2>Rather than one topic, I work across a few connected themes.</h2>
             <p class="lead">
-              My work clusters around questions about how people learn, how psychological research is delivered, how lived experience shapes better research, and how evidence becomes useful.
+              My work clusters around how people experience, engage with, and benefit from psychological research and digital tools, particularly in learning and mental health contexts, and how research can be made more person-centred, transparent, and useful in practice.
             </p>
           </div>
         </div>
 
         <div class="grid grid-2">
           <article class="card">
-            <h3>Learning, language, and development</h3>
+            <h3>Digital tools and interventions</h3>
             <p>
-              Individual differences, adolescence, additional-language learning, educational experience, and cognitive and environmental predictors of learning outcomes.
+              Digital tools for learning and mental health, including adaptive language-learning tools, remote interventions, digital working alliance, and how psychological evidence can inform tools that are practical, engaging, and useful.
             </p>
           </article>
 
-          <article class="card leaf">
-            <h3>Mental health and digital interventions</h3>
+          <article class="card">
+            <h3>Experiences, attitudes, and engagement</h3>
             <p>
-              Psychosis research, remote cognitive remediation, digital mental health tools, relapse prediction, intervention acceptability, and participant-centred research.
+              How people experience and make sense of digital interventions and tools, including acceptability, engagement, usability, trust, and perceived value.
             </p>
           </article>
 
-          <article class="card lavender">
-            <h3>Evidence synthesis and research methods</h3>
+          <article class="card">
+            <h3>Mental health and person-centred research</h3>
             <p>
-              Systematic reviews, meta-analysis, mixed methods, qualitative interviewing, quantitative analysis, transparent workflows, and making complex evidence digestible.
+              Psychosis research, cognitive remediation, digital mental health, participant-centred study design, and research that values people’s lived experiences.
             </p>
           </article>
 
-          <article class="card rose">
-            <h3>PPI, lived experience, and useful research</h3>
+          <article class="card">
+            <h3>Methods, synthesis, and open research</h3>
             <p>
-              Research shaped with people and communities, not just about them: advisory groups, accessible materials, creative dissemination, and meaningful involvement.
+              Systematic reviews, meta-analysis, qualitative and mixed methods, transparent workflows, accessible outputs, and making open science usable beyond specialist audiences.
             </p>
           </article>
         </div>
@@ -792,8 +772,8 @@
           </article>
 
           <article class="card">
-            <h3>PPI and facilitation</h3>
-            <p>PPI facilitation, advisory groups, accessible materials, and research shaped with people and communities.</p>
+            <h3>PPIE and facilitation</h3>
+            <p>Public and patient involvement and engagement, advisory groups, accessible materials, and research shaped with people and communities.</p>
           </article>
 
           <article class="card">
@@ -876,24 +856,32 @@
           <article class="timeline-item">
             <div class="timeline-date">2025–present</div>
             <div>
-              <h3>PhD Researcher, University of Cambridge</h3>
-              <p>Doctoral researcher in the Brain, Language and Bilingualism Lab, Department of Psychology, funded by the ESRC CAM-DTP.</p>
+              <h3>Fully funded PhD, University of Cambridge</h3>
+              <p>ESRC CAM-DTP-funded PhD Researcher in the Brain, Language and Bilingualism Lab, Department of Psychology.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-date">2026</div>
+            <div>
+              <h3>Open research and public engagement</h3>
+              <p>Registered my review on PROSPERO, contributed to Cambridge Science Festival, and received a School of Biological Sciences Participatory Research Fund award (£580).</p>
             </div>
           </article>
 
           <article class="timeline-item">
             <div class="timeline-date">Teaching</div>
             <div>
-              <h3>Cambridge Higher Aspirations Scheme</h3>
-              <p>Psychological and Behavioural Sciences Supervisor supporting students from underrepresented backgrounds to explore university-level psychology.</p>
+              <h3>Psychology teaching and widening participation</h3>
+              <p>Developed and led five Psychology and Behavioural Sciences supervisions and a final project for eight A-level students through the Cambridge Higher Aspirations Scheme.</p>
             </div>
           </article>
 
           <article class="timeline-item">
-            <div class="timeline-date">Posters</div>
+            <div class="timeline-date">Applied work</div>
             <div>
-              <h3>Remote cognitive remediation research</h3>
-              <p>Presented and shared poster outputs on remote cognitive remediation, including acceptability, feasibility, and cost evaluation work.</p>
+              <h3>Research beyond academia</h3>
+              <p>Worked as a Senior Research Consultant with management responsibilities, including Welsh Government-funded research and theatre-based mental health dissemination.</p>
             </div>
           </article>
 
@@ -901,14 +889,14 @@
             <div class="timeline-date">Awards</div>
             <div>
               <h3>Funding, scholarships, and recognition</h3>
-              <p>ESRC CAM-DTP doctoral funding, Bangor University academic scholarships and grants, and a KCL Recognition Award for contributions to lab work.</p>
+              <p>Received a KCL Recognition Award (£1k), Bangor School of Psychology Internal Achievement Scholarship (£1k; top 8 students), and James Pantyfedwen Foundation Grant (£5k).</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="open" class="section section-bg-white">
+    <section id="open" class="section section-bg-peony">
       <div class="section-inner">
         <div class="section-head">
           <div class="kicker">Open research</div>
@@ -922,30 +910,25 @@
         </div>
 
         <div class="grid grid-2">
-          <article class="card lavender">
+          <article class="card">
             <h3>Open materials</h3>
             <p>
               As my PhD develops, I plan to share suitable protocols, summaries, posters, code, and research materials through open platforms where possible.
             </p>
 
-            <div class="open-links">
-              <a class="tag" href="https://osf.io/suh3n/">OSF</a>
-              <a class="tag" href="https://orcid.org/0000-0002-1042-1867">ORCID</a>
-              <a class="tag" href="https://www.researchgate.net/profile/Lois-Parri-3">ResearchGate</a>
-            </div>
+            <p class="open-links">
+              <a href="https://osf.io/suh3n/">OSF</a>,
+              <a href="https://orcid.org/0000-0002-1042-1867">ORCID</a>,
+              <a href="https://www.researchgate.net/profile/Lois-Parri-3">ResearchGate</a>
+            </p>
           </article>
 
-          <article class="card rose">
+          <article class="card">
             <h3>Creative dissemination</h3>
             <p>
               I’m interested in how art, language, design, public involvement, and accessible writing can help research travel beyond academic papers.
             </p>
 
-            <div class="open-links">
-              <span class="tag">Welsh/English</span>
-              <span class="tag">Public engagement</span>
-              <span class="tag">Creative methods</span>
-            </div>
           </article>
         </div>
       </div>
@@ -959,12 +942,12 @@
           <div>
             <h2>Let’s talk.</h2>
             <p class="lead">
-              I’m open to conversations about psychology research, research coordination and study delivery, systematic reviews and meta-analysis, PPI, digital mental health, language and learning, and creative approaches to research dissemination.
+              If you’d like to discuss my work, opportunities to collaborate, or anything else, please feel free to get in touch - I’m always happy to chat about research, ideas, or potential projects.
             </p>
 
             <div class="hero-actions">
               <a class="button primary" href="mailto:lap68@cam.ac.uk">Email</a>
-              <a class="button" href="https://www.linkedin.com/in/lois-parri/">LinkedIn</a>
+              <a class="button primary" href="https://www.linkedin.com/in/lois-parri/">LinkedIn</a>
             </div>
           </div>
         </div>
