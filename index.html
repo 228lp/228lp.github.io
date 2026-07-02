@@ -16,26 +16,18 @@
       --grass: #8D8B4C;
       --jungle: #65613F;
       --peony: #F7DDD5;
-      --dusty-rose: #D8A4AF;
-
       --bg: #f4efe8;
       --text: #43383d;
       --muted: #6c6166;
       --line: rgba(67, 56, 61, 0.14);
-      --white-soft: rgba(255, 252, 248, 0.72);
-      --white-strong: rgba(255, 252, 248, 0.9);
-      --shadow: 0 18px 50px rgba(67, 56, 61, 0.10);
+      --cream: #fffdf8;
+      --soft-card: rgba(255, 252, 248, 0.64);
       --radius: 30px;
       --max: 1100px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -54,276 +46,7 @@
       transition: opacity 0.2s ease;
     }
 
-    a:hover {
-      opacity: 0.6;
-    }
-
-    .brand,
-    .button {
-      text-decoration: none;
-    }
-
-    .brand:hover,
-    .button:hover {
-      text-decoration: none;
-      opacity: 0.7;
-    }
-
-    .skip-link {
-      position: absolute;
-      left: -999px;
-      top: 10px;
-      background: var(--jungle);
-      color: white;
-      padding: 10px 14px;
-      border-radius: 999px;
-      z-index: 999;
-    }
-
-    .skip-link:focus {
-      left: 12px;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(244, 239, 232, 0.88);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 14px 22px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .brand {
-      font-size: 0.98rem;
-      font-weight: 700;
-      color: var(--jungle);
-      letter-spacing: 0.02em;
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      justify-content: flex-end;
-      font-family: Arial, sans-serif;
-      font-size: 0.76rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text);
-    }
-
-    .section {
-      padding: clamp(70px, 9vw, 120px) 22px;
-    }
-
-    .section.compact {
-      padding: clamp(54px, 7vw, 86px) 22px;
-    }
-
-    .section-inner {
-      max-width: var(--max);
-      margin: 0 auto;
-    }
-
-    .section-bg-hero {
-      background: linear-gradient(
-        180deg,
-        rgba(247, 221, 213, 0.96),
-        rgba(204, 195, 209, 0.86)
-      );
-    }
-
-    .section-bg-cream {
-      background:
-        radial-gradient(circle at 12% 0%, rgba(204, 195, 209, 0.46), transparent 26rem),
-        radial-gradient(circle at 92% 10%, rgba(247, 221, 213, 0.62), transparent 24rem),
-        #fbf7ef;
-    }
-
-    .section-bg-white {
-      background:
-        radial-gradient(circle at 12% 0%, rgba(247, 221, 213, 0.42), transparent 24rem),
-        #fbf7ef;
-    }
-
-    .section-bg-peony {
-      background:
-        radial-gradient(circle at 10% 0%, rgba(216, 164, 175, 0.28), transparent 24rem),
-        radial-gradient(circle at 92% 10%, rgba(204, 195, 209, 0.34), transparent 26rem),
-        linear-gradient(180deg, rgba(247, 221, 213, 0.98), rgba(247, 221, 213, 0.78));
-    }
-
-    .section-bg-lavender {
-      background:
-        radial-gradient(circle at 10% 0%, rgba(247, 221, 213, 0.38), transparent 24rem),
-        radial-gradient(circle at 92% 12%, rgba(216, 164, 175, 0.22), transparent 26rem),
-        linear-gradient(180deg, rgba(204, 195, 209, 0.98), rgba(204, 195, 209, 0.76));
-    }
-
-    .section-bg-leaf {
-      background:
-        radial-gradient(circle at 12% 0%, rgba(247, 221, 213, 0.26), transparent 24rem),
-        radial-gradient(circle at 92% 8%, rgba(204, 195, 209, 0.20), transparent 26rem),
-        linear-gradient(180deg, rgba(193, 188, 119, 0.92), rgba(193, 188, 119, 0.70));
-    }
-
-    .section-bg-green {
-      background:
-        radial-gradient(circle at 16% 0%, rgba(247, 221, 213, 0.14), transparent 22rem),
-        radial-gradient(circle at 86% 12%, rgba(193, 188, 119, 0.28), transparent 24rem),
-        linear-gradient(180deg, var(--grass) 0%, var(--jungle) 100%);
-      color: #fffdf8;
-    }
-
-    .section-bg-rosegreen {
-      background:
-        radial-gradient(circle at 18% 0%, rgba(247, 221, 213, 0.26), transparent 22rem),
-        radial-gradient(circle at 86% 12%, rgba(204, 195, 209, 0.12), transparent 24rem),
-        linear-gradient(180deg, var(--dusty-rose) 0%, var(--jungle) 100%);
-      color: #fffdf8;
-    }
-
-    .hero-layout {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 38px;
-      align-items: center;
-    }
-
-    .hero-title {
-      color: var(--text);
-      font-size: clamp(3rem, 6vw, 5.2rem);
-      letter-spacing: -0.055em;
-      line-height: 0.95;
-      max-width: none;
-      white-space: nowrap;
-    }
-
-    .hero-copy {
-      margin-top: 18px;
-      max-width: 590px;
-      color: var(--muted);
-      font-size: 1.02rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 24px;
-      font-family: Arial, sans-serif;
-    }
-
-    .hero-side {
-      justify-self: center;
-      width: min(100%, 320px);
-    }
-
-    .hero-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 14px;
-      font-family: Arial, sans-serif;
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--jungle);
-      font-weight: 800;
-      text-align: center;
-    }
-
-    .portrait {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      border-radius: 28px;
-      overflow: hidden;
-      background: var(--lavender);
-      box-shadow: 0 10px 26px rgba(67, 56, 61, 0.08);
-    }
-
-    .portrait img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .photo-placeholder {
-      display: none;
-      width: 100%;
-      height: 100%;
-      place-items: center;
-      text-align: center;
-      padding: 22px;
-      font-family: Arial, sans-serif;
-      font-size: 0.82rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--jungle);
-    }
-
-    .section-head {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 28px;
-      margin-bottom: 30px;
-    }
-
-    .section-head.no-margin {
-      margin-bottom: 0;
-    }
-
-    .text-panel {
-      max-width: 830px;
-    }
-
-    .kicker,
-    .eyebrow,
-    .meta,
-    .timeline-date {
-      font-family: Arial, sans-serif;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-    }
-
-    .kicker {
-      font-size: 0.74rem;
-      color: var(--jungle);
-    }
-
-    .eyebrow {
-      margin: 18px 0 0;
-      max-width: 620px;
-      color: var(--jungle);
-      font-size: clamp(0.76rem, 1.1vw, 0.88rem);
-      line-height: 1.5;
-    }
-
-    .meta {
-      color: var(--jungle);
-      font-size: 0.7rem;
-      margin-bottom: 10px;
-    }
-
-    .timeline-date {
-      font-size: 0.74rem;
-      color: var(--peony);
-      opacity: 0.72;
-    }
+    a:hover { opacity: 0.6; }
 
     h1,
     h2,
@@ -343,6 +66,240 @@
       font-size: 1.18rem;
     }
 
+    .brand,
+    .button { text-decoration: none; }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 10px;
+      z-index: 999;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--jungle);
+      color: white;
+    }
+
+    .skip-link:focus { left: 12px; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(244, 239, 232, 0.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav,
+    .section-inner,
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .nav {
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      color: var(--jungle);
+      font-size: 0.98rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links,
+    .button,
+    .hero-links,
+    .kicker,
+    .eyebrow,
+    .accordion-label,
+    .pub a,
+    footer {
+      font-family: Arial, sans-serif;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 14px;
+      color: var(--text);
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .section { padding: clamp(70px, 9vw, 120px) 22px; }
+
+    .section-bg-hero {
+      background: linear-gradient(
+        180deg,
+        rgba(247, 221, 213, 0.96),
+        rgba(204, 195, 209, 0.86)
+      );
+    }
+
+    .section-bg-leaf {
+      background:
+        radial-gradient(circle at 12% 0%, rgba(247, 221, 213, 0.26), transparent 24rem),
+        radial-gradient(circle at 92% 8%, rgba(204, 195, 209, 0.20), transparent 26rem),
+        linear-gradient(180deg, rgba(193, 188, 119, 0.92), rgba(193, 188, 119, 0.70));
+    }
+
+    .section-bg-lavender {
+      background:
+        radial-gradient(circle at 10% 0%, rgba(247, 221, 213, 0.38), transparent 24rem),
+        radial-gradient(circle at 92% 12%, rgba(216, 164, 175, 0.22), transparent 26rem),
+        linear-gradient(180deg, rgba(204, 195, 209, 0.98), rgba(204, 195, 209, 0.76));
+    }
+
+    .section-bg-green {
+      color: var(--cream);
+      background:
+        radial-gradient(circle at 16% 0%, rgba(247, 221, 213, 0.14), transparent 22rem),
+        radial-gradient(circle at 86% 12%, rgba(193, 188, 119, 0.28), transparent 24rem),
+        linear-gradient(180deg, var(--grass), var(--jungle));
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 38px;
+      align-items: center;
+    }
+
+    .hero-title {
+      color: var(--text);
+      font-size: clamp(3rem, 6vw, 5.2rem);
+      letter-spacing: -0.055em;
+      line-height: 0.95;
+      white-space: nowrap;
+    }
+
+    .eyebrow {
+      margin: 18px 0 0;
+      max-width: 620px;
+      color: var(--jungle);
+      font-size: clamp(0.76rem, 1.1vw, 0.88rem);
+      font-weight: 800;
+      line-height: 1.5;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .hero-copy {
+      margin-top: 18px;
+      max-width: 590px;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .button {
+      min-height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 16px;
+      border: 1.5px solid var(--jungle);
+      border-radius: 999px;
+      color: var(--jungle);
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .button.primary {
+      background: var(--jungle);
+      color: var(--cream);
+    }
+
+    .section-bg-green .button {
+      border-color: rgba(255, 253, 248, 0.82);
+      color: var(--cream);
+      background: rgba(255, 253, 248, 0.14);
+    }
+
+    .hero-side {
+      justify-self: center;
+      width: min(100%, 320px);
+    }
+
+    .portrait {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      border-radius: 28px;
+      background: var(--lavender);
+      box-shadow: 0 10px 26px rgba(67, 56, 61, 0.08);
+    }
+
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-placeholder {
+      display: none;
+      width: 100%;
+      height: 100%;
+      place-items: center;
+      padding: 22px;
+      color: var(--jungle);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 14px;
+      color: var(--jungle);
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 28px;
+      margin-bottom: 30px;
+    }
+
+    .section-head.no-margin { margin-bottom: 0; }
+
+    .kicker {
+      color: var(--jungle);
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
     .lead {
       margin: 14px 0 0;
       max-width: 780px;
@@ -351,221 +308,194 @@
     }
 
     .section-bg-green h2,
-    .section-bg-green h3,
-    .section-bg-rosegreen h2,
-    .section-bg-rosegreen h3 {
-      color: #fffdf8;
-    }
+    .section-bg-green h3 { color: var(--cream); }
 
-    .section-bg-green .kicker,
-    .section-bg-rosegreen .kicker {
-      color: var(--peony);
-    }
+    .section-bg-green .kicker { color: var(--peony); }
 
     .section-bg-green .lead,
-    .section-bg-green p,
-    .section-bg-rosegreen .lead,
-    .section-bg-rosegreen p {
-      color: rgba(255, 253, 248, 0.86);
-    }
-
-    .button {
-      border: 1.5px solid var(--jungle);
-      border-radius: 999px;
-      padding: 11px 16px;
-      min-height: 42px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-family: Arial, sans-serif;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-weight: 800;
-    }
-
-    .button.primary {
-      background: var(--jungle);
-      border-color: var(--jungle);
-      color: #fffdf8;
-    }
-
-    .button.secondary {
-      background: transparent;
-      color: var(--jungle);
-    }
-
-    .button.disabled {
-      color: rgba(101, 97, 63, 0.48);
-      border-color: rgba(101, 97, 63, 0.28);
-      cursor: not-allowed;
-    }
-
-    .section-bg-green .button,
-    .section-bg-rosegreen .button {
-      border-color: rgba(255, 253, 248, 0.82);
-      color: #fffdf8;
-      background: transparent;
-    }
-
-    .section-bg-green .button.primary,
-    .section-bg-rosegreen .button.primary {
-      background: rgba(255, 253, 248, 0.14);
-    }
+    .section-bg-green p { color: rgba(255, 253, 248, 0.86); }
 
     .grid {
       display: grid;
       gap: 16px;
     }
 
-    .grid-3 {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
 
-    .grid-2 {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .card {
-      background: rgba(255, 252, 248, 0.66);
-      border: 1px solid rgba(67, 56, 61, 0.14);
+    .card,
+    .accordion {
+      background: var(--soft-card);
+      border: 1px solid rgba(67, 56, 61, 0.13);
       border-radius: var(--radius);
-      padding: 24px;
     }
 
-    .section-bg-peony .card,
-    .section-bg-lavender .card,
     .section-bg-leaf .card,
-    .section-bg-white .card,
-    .section-bg-cream .card {
-      background: rgba(255, 252, 248, 0.64);
+    .section-bg-leaf .accordion {
+      background: rgba(255, 252, 248, 0.50);
+      border-color: rgba(67, 56, 61, 0.12);
+    }
+
+    .section-bg-lavender .card,
+    .section-bg-lavender .accordion {
+      background: rgba(255, 252, 248, 0.62);
       border-color: rgba(67, 56, 61, 0.13);
     }
 
-    .card h3 {
-      margin-bottom: 10px;
+    .card { padding: 24px; }
+    .card h3 { margin-bottom: 10px; }
+    .card p { margin: 0; color: var(--muted); }
+
+    .accordion-list {
+      display: grid;
+      gap: 14px;
     }
 
-    .card p {
-      margin: 0;
-      color: var(--muted);
+    .accordion { overflow: hidden; }
+
+    .accordion-trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 22px 24px;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
     }
+
+    .accordion-trigger:hover .accordion-title,
+    .accordion-trigger:focus-visible .accordion-title { opacity: 0.72; }
+
+    .accordion-trigger:focus-visible {
+      outline: 2px solid rgba(101, 97, 63, 0.45);
+      outline-offset: -6px;
+      border-radius: var(--radius);
+    }
+
+    .accordion-label {
+      display: block;
+      color: var(--jungle);
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .accordion-title {
+      display: block;
+      margin-top: 4px;
+      color: var(--text);
+      font-size: 1.18rem;
+      font-weight: 700;
+      line-height: 1.2;
+      transition: opacity 0.2s ease;
+    }
+
+    .accordion-title.only-title {
+      margin-top: 0;
+      font-size: 1.36rem;
+    }
+
+    .chevron {
+      flex: 0 0 auto;
+      color: var(--jungle);
+      font-family: Arial, sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      line-height: 1;
+      transition: transform 0.25s ease;
+    }
+
+    .accordion.is-open .chevron { transform: rotate(180deg); }
+
+    .accordion-panel {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.36s ease, opacity 0.26s ease;
+    }
+
+    .accordion.is-open .accordion-panel { opacity: 1; }
+
+    .accordion-inner { padding: 0 24px 24px; }
 
     .pub-list {
       display: grid;
       gap: 0;
-      background: rgba(255, 252, 248, 0.64);
-      border: 1px solid rgba(67, 56, 61, 0.13);
-      border-radius: var(--radius);
       overflow: hidden;
-      box-shadow: none;
+      border: 1px solid rgba(67, 56, 61, 0.10);
+      border-radius: 22px;
+      background: rgba(255, 252, 248, 0.42);
     }
 
     .pub {
-      padding: 22px 24px;
-      border-bottom: 1px solid rgba(67, 56, 61, 0.12);
-      background: transparent;
+      padding: 20px;
+      border-bottom: 1px solid rgba(67, 56, 61, 0.10);
     }
 
-    .pub:last-child {
-      border-bottom: none;
-    }
+    .pub:last-child { border-bottom: 0; }
 
     .pub-title {
+      margin-bottom: 8px;
       color: var(--text);
       font-weight: 700;
-      margin-bottom: 8px;
     }
 
-    .pub-details {
+    .pub-details,
+    .accordion-inner p {
+      margin: 0;
       color: var(--muted);
-      margin: 0 0 8px;
     }
 
-    .pub a,
-    .open-links a {
-      font-family: Arial, sans-serif;
+    .pub a {
+      display: inline-block;
+      margin-top: 8px;
+      margin-right: 14px;
+      color: var(--jungle);
       font-size: 0.74rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: var(--jungle);
-    }
-
-    .timeline {
-      display: grid;
-      gap: 0;
-      margin-top: 34px;
-    }
-
-    .timeline-item {
-      display: grid;
-      grid-template-columns: 170px 1fr;
-      gap: 18px;
-      padding: 26px 0;
-      border-bottom: 1px solid rgba(255, 253, 248, 0.18);
-    }
-
-    .timeline-item:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .open-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 14px;
-      margin-bottom: 0;
     }
 
     footer {
       background: var(--bg);
       color: var(--muted);
-      font-family: Arial, sans-serif;
       font-size: 0.84rem;
       border-top: 1px solid var(--line);
     }
 
     .footer-inner {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 28px 22px 48px;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       gap: 16px;
-      flex-wrap: wrap;
+      padding: 28px 22px 48px;
     }
 
     @media (max-width: 900px) {
       .hero-layout,
-      .grid-3,
       .grid-2,
-      .section-head,
-      .timeline-item {
+      .grid-3,
+      .section-head {
         grid-template-columns: 1fr;
       }
 
-      .section {
-        padding: 68px 22px;
-      }
-
-      .hero-side {
-        justify-self: start;
-      }
-
-      .hero-title {
-        white-space: normal;
-      }
+      .section { padding: 68px 22px; }
+      .hero-side { justify-self: start; }
+      .hero-title { white-space: normal; }
 
       .nav {
         flex-direction: column;
         align-items: flex-start;
       }
 
-      .nav-links {
-        justify-content: flex-start;
-      }
+      .nav-links { justify-content: flex-start; }
     }
   </style>
 </head>
@@ -576,10 +506,9 @@
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
       <a class="brand" href="#top">Lois Ann Parri</a>
-
       <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
+        <a href="#work">Current Work</a>
+        <a href="#interests">Interests</a>
         <a href="#skills">Skills</a>
         <a href="#outputs">Outputs</a>
         <a href="#contact">Contact</a>
@@ -593,19 +522,16 @@
         <div class="hero-layout">
           <div>
             <h1 class="hero-title">Lois Ann Parri</h1>
-
             <p class="eyebrow">
               PhD Researcher<br>
               Department of Psychology<br>
               University of Cambridge
             </p>
-
             <p class="hero-copy">
-              I’m a person-centred psychology researcher interested in how people experience and engage with digital tools and interventions. My PhD applies this to developing an individualised adaptive language-learning tool, with a focus on accessibility, and real-world usefulness.
+              A generalist researcher interested in how people experience, engage with, and benefit from research, digital tools, and interventions. Happiest on projects coordinating various moving parts, tackling a range of ideas, people, and methods, and turning research into something genuinely useful beyond academia.
             </p>
-
             <div class="hero-actions">
-              <a class="button primary" href="mailto:lap68@cam.ac.uk">Email me</a>
+              <a class="button primary" href="mailto:lap68@cam.ac.uk">Email</a>
               <a class="button primary" href="Lois-Parri-CV.pdf" target="_blank" rel="noopener">View CV</a>
             </div>
           </div>
@@ -616,7 +542,7 @@
                 src="loisacademic.png"
                 alt="Portrait of Lois Ann Parri"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
-              />
+              >
               <div class="photo-placeholder">loisacademic.png</div>
             </div>
 
@@ -626,78 +552,51 @@
               <a href="https://www.psychol.cam.ac.uk/staff/lois-ann-parri">Cambridge Profile</a>
               <a href="https://osf.io/suh3n/">OSF</a>
               <a href="https://orcid.org/0000-0002-1042-1867">ORCID</a>
-            </p>
             </div>
           </aside>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section section-bg-green">
-      <div class="section-inner">
-        <div class="section-head no-margin">
-          <div class="kicker">About</div>
-
-          <div class="text-panel">
-            <h2>Generalist researcher by experience.</h2>
-
-            <p class="lead">
-              I enjoy work that lets me tackle a variety of ideas, people, methods, and practical delivery. I’m happiest on projects where I can coordinate moving parts, engage with different groups, analyse complex information, and help turn research into something that's genuinely useful beyond academia.
-            </p>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="work" class="section section-bg-peony">
+    <section id="work" class="section section-bg-leaf">
       <div class="section-inner">
         <div class="section-head">
           <div class="kicker">Current work</div>
-
           <div>
-            <h2>What I’m working on now</h2>
+            <h2>First-Year PhD Researcher</h2>
             <p class="lead">
-              My PhD uses adolescent additional-language learning as a context for a broader question: how can psychological evidence, lived experience, and PPIE inform digital tools that are usable, engaging, and genuinely accessible?
+              My PhD uses adolescent additional-language learning as a context for a broader question: how can psychological evidence and lived experience inform digital tools that are usable, engaging, and genuinely accessible?
             </p>
           </div>
         </div>
 
         <div class="grid grid-3">
           <article class="card">
-            <h3>Evidence synthesis and meta-analysis</h3>
-            <p>
-              I am conducting a systematic review and meta-analysis of predictors of adolescent additional-language learning, bringing together evidence from psychology, education, linguistics, and cognitive neuroscience.
-            </p>
+            <h3>Evidence synthesis and empirical study</h3>
+            <p>To identify relevant predictor-outcome associations, I conducted a broad meta-analysis to synthesise evidence across fields. Next, I will run an empirical study to test these associations directly.</p>
           </article>
 
           <article class="card">
             <h3>Adolescent Advisory Group</h3>
-            <p>
-              To ensure my research is informed by and relevant to the people it aims to understand and support, I have established an advisory group of adolescents. The group is active, and find more information <a href="https://228lp.github.io/adolescent-advisory-group/">here</a>.
-            </p>
+            <p>To ensure my research is informed by and relevant to the people it aims to understand and support, I have established an advisory group of adolescents. The group is active, and more information is available <a href="https://228lp.github.io/adolescent-advisory-group/">here</a>.</p>
           </article>
 
           <article class="card">
             <h3>Psychology-led adaptive learning tool</h3>
-            <p>
-              I am supporting the development of a pilot adaptive language-learning tool, focusing on how research evidence can inform digital learning experiences that are practical, engaging, personalised, and accessible.
-            </p>
+            <p>I am supporting the development of a pilot adaptive language-learning tool, focusing on how research evidence can inform digital learning experiences that are practical, engaging, and personalised.</p>
           </article>
-
         </div>
       </div>
     </section>
 
-    <section id="themes" class="section section-bg-lavender">
+    <section id="interests" class="section section-bg-lavender">
       <div class="section-inner">
         <div class="section-head">
-          <div class="kicker">Research interests</div>
-
+          <div class="kicker">Interests</div>
           <div>
-            <h2>Rather than one topic, I work across a few connected themes.</h2>
+            <h2>Generalist research interests.</h2>
             <p class="lead">
-              My work clusters around how people experience, engage with, and benefit from psychological research and digital tools, particularly in learning and mental health contexts, and how research can be made more person-centred, transparent, and useful in practice.
+              My work clusters around interconnected themes related to how people experience, engage with, and benefit from digital tools, with a focus on making research more person-centred, transparent, and useful in practice.
             </p>
           </div>
         </div>
@@ -705,30 +604,17 @@
         <div class="grid grid-2">
           <article class="card">
             <h3>Digital tools and interventions</h3>
-            <p>
-              Digital tools for learning and mental health, digital working alliance, and how psychological evidence can inform tools that are practical, engaging, and useful.
-            </p>
+            <p>Digital tools for learning and mental health, digital working alliance, and how evidence should be applied to inform the development of such tools.</p>
           </article>
 
           <article class="card">
-            <h3>Experiences, attitudes, and engagement</h3>
-            <p>
-              How people experience and make sense of digital interventions and tools, including acceptability, engagement, usability, trust, and perceived value.
-            </p>
+            <h3>User experiences and beliefs</h3>
+            <p>How people experience and make sense of digital interventions and tools, including acceptability, engagement, usability, trust, and perceived value.</p>
           </article>
 
           <article class="card">
-            <h3>Mental health and person-centred research</h3>
-            <p>
-              Psychosis research, cognitive remediation, digital mental health, participant-centred study design, and research that values people’s lived experiences.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Methods, synthesis, and open research</h3>
-            <p>
-              Systematic reviews, meta-analysis, qualitative and mixed methods, transparent workflows, accessible outputs, and making open science usable beyond specialist audiences.
-            </p>
+            <h3>Efficient and appropriate research</h3>
+            <p>Complementary methods, transparent workflows, accessible outputs, open science practices, and avoiding research waste.</p>
           </article>
         </div>
       </div>
@@ -738,11 +624,10 @@
       <div class="section-inner">
         <div class="section-head">
           <div class="kicker">Skills</div>
-
           <div>
             <h2>What I bring to projects</h2>
             <p class="lead">
-              I bring a mix of research delivery, participant-facing work, analysis, writing, synthesis, and coordination.
+              A mix of research delivery, participant-facing work, analysis, writing, synthesis, and coordination.
             </p>
           </div>
         </div>
@@ -754,13 +639,8 @@
           </article>
 
           <article class="card">
-            <h3>Mixed methods</h3>
-            <p>Qualitative interviewing, thematic analysis, quantitative statistical analysis, systematic review, meta-analysis, and data preparation.</p>
-          </article>
-
-          <article class="card">
-            <h3>PPIE and facilitation</h3>
-            <p>Public and patient involvement and engagement, advisory groups, accessible materials, and research shaped with people and communities.</p>
+            <h3>Mixed and participatory methods</h3>
+            <p>Public and patient involvement and engagement, qualitative interviewing, thematic analysis, quantitative statistical analysis, systematic review, meta-analysis, and data preparation.</p>
           </article>
 
           <article class="card">
@@ -775,106 +655,179 @@
       <div class="section-inner">
         <div class="section-head">
           <div class="kicker">Outputs</div>
-
           <div>
-            <h2>Publications and selected outputs</h2>
-            <p class="lead">
-              A selected list of publications and research outputs.
-            </p>
+            <h2>Publications, conferences, media, and events</h2>
+            <p class="lead">A compact overview of selected academic and public-facing outputs, grouped so the section does not overload the page.</p>
           </div>
         </div>
 
-        <div class="pub-list">
-          <article class="pub">
-            <div class="pub-title">Feasibility and potential effects of a combined money advice and psychological therapy intervention within NHS Talking Therapies services.</div>
-            <p class="pub-details">Belcher, H. L., Parri, L., Kilcoyne, I., Evans, J., Lewin, C. D. C., Lau, R., … & Wykes, T. (2025). <em>BJPsych Open, 11</em>(4), e120.</p>
-            <a href="https://doi.org/10.1192/bjo.2025.37">DOI</a>
-          </article>
+        <div class="accordion-list">
+          <div class="accordion">
+            <button class="accordion-trigger" type="button" aria-expanded="false">
+              <span class="accordion-title only-title">Publications (5)</span>
+              <span class="chevron" aria-hidden="true">⌄</span>
+            </button>
 
-          <article class="pub">
-            <div class="pub-title">Evaluating remote delivery of cognitive remediation in people with psychosis.</div>
-            <p class="pub-details">Cella, M., Parri, L., Wang, K., Quinn, R., Oyeleye, O., Jin, H., & Wykes, T. (2024). <em>Schizophrenia Research, 267</em>, 367–372.</p>
-            <a href="https://doi.org/10.1016/j.schres.2024.04.001">DOI</a>
-          </article>
+            <div class="accordion-panel">
+              <div class="accordion-inner">
+                <div class="pub-list" aria-label="Selected publications">
+                  <article class="pub">
+                    <div class="pub-title">Feasibility and potential effects of a combined money advice and psychological therapy intervention within NHS Talking Therapies services.</div>
+                    <p class="pub-details">Belcher, H. L., Parri, L., Kilcoyne, I., Evans, J., Lewin, C. D. C., Lau, R., … & Wykes, T. (2025). <em>BJPsych Open, 11</em>(4), e120.</p>
+                    <a href="https://doi.org/10.1192/bjo.2025.37">DOI</a>
+                  </article>
 
-          <article class="pub">
-            <div class="pub-title">Understanding psychosis complexity through a syndemic framework: A systematic review.</div>
-            <p class="pub-details">Zahid, U., Lawrence, E. G., de Freitas, D. F., Parri, L. A., Quadros, W., Hua, P., … & Bhui, K. (2024). <em>Neuroscience & Biobehavioral Reviews, 159</em>, 105614.</p>
-            <a href="https://doi.org/10.1016/j.neubiorev.2024.105614">DOI</a>
-          </article>
+                  <article class="pub">
+                    <div class="pub-title">Evaluating remote delivery of cognitive remediation in people with psychosis.</div>
+                    <p class="pub-details">Cella, M., Parri, L., Wang, K., Quinn, R., Oyeleye, O., Jin, H., & Wykes, T. (2024). <em>Schizophrenia Research, 267</em>, 367–372.</p>
+                    <a href="https://doi.org/10.1016/j.schres.2024.04.001">DOI</a>
+                  </article>
 
-          <article class="pub">
-            <div class="pub-title">Evaluating the acceptability of remote cognitive remediation from the perspective of psychosis service users.</div>
-            <p class="pub-details">Parri, L. A., Barret, K., Hill, R., Hoque, A., Isok, I., Kenny, A., … & Cella, M. (2024). <em>Behavioural and Cognitive Psychotherapy, 52</em>(5), 495–507.</p>
-            <a href="https://doi.org/10.1017/S1352465824000109">DOI</a>
-          </article>
+                  <article class="pub">
+                    <div class="pub-title">Understanding psychosis complexity through a syndemic framework: A systematic review.</div>
+                    <p class="pub-details">Zahid, U., Lawrence, E. G., de Freitas, D. F., Parri, L. A., Quadros, W., Hua, P., … & Bhui, K. (2024). <em>Neuroscience & Biobehavioral Reviews, 159</em>, 105614.</p>
+                    <a href="https://doi.org/10.1016/j.neubiorev.2024.105614">DOI</a>
+                  </article>
 
-          <article class="pub">
-            <div class="pub-title">“Anorexia-lite”: The dangers of weight classification in diagnosis.</div>
-            <p class="pub-details">da Cunha Lewin, C., Hudson, G., & Parri, L. (2023). <em>The Lancet Psychiatry, 10</em>(9), 666–667.</p>
-            <a href="https://doi.org/10.1016/S2215-0366(23)00263-8">DOI</a>
-          </article>
+                  <article class="pub">
+                    <div class="pub-title">Evaluating the acceptability of remote cognitive remediation from the perspective of psychosis service users.</div>
+                    <p class="pub-details">Parri, L. A., Barret, K., Hill, R., Hoque, A., Isok, I., Kenny, A., … & Cella, M. (2024). <em>Behavioural and Cognitive Psychotherapy, 52</em>(5), 495–507.</p>
+                    <a href="https://doi.org/10.1017/S1352465824000109">DOI</a>
+                  </article>
+
+                  <article class="pub">
+                    <div class="pub-title">“Anorexia-lite”: The dangers of weight classification in diagnosis.</div>
+                    <p class="pub-details">da Cunha Lewin, C., Hudson, G., & Parri, L. (2023). <em>The Lancet Psychiatry, 10</em>(9), 666–667.</p>
+                    <a href="https://doi.org/10.1016/S2215-0366(23)00263-8">DOI</a>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <button class="accordion-trigger" type="button" aria-expanded="false">
+              <span class="accordion-title only-title">Conferences (5)</span>
+              <span class="chevron" aria-hidden="true">⌄</span>
+            </button>
+
+            <div class="accordion-panel">
+              <div class="accordion-inner">
+                <div class="pub-list" aria-label="Selected conference outputs">
+                  <article class="pub">
+                    <div class="pub-title">2026 Society for the Neurobiology of Language (SNL), <em>Geneva</em></div>
+                    <p class="pub-details">Pending poster presentation of a meta-analysis on predictors of adolescent additional-language attainment across linguistic domains.</p>
+                  </article>
+
+                  <article class="pub">
+                    <div class="pub-title">2024 Schizophrenia International Research Society (SIRS), <em>Florence</em></div>
+                    <p class="pub-details">Poster presentation of a quantitative study on the efficacy of remote cognitive remediation for psychosis service users.</p>
+                  </article>
+
+                  <article class="pub">
+                    <div class="pub-title">2023 British Association of Behavioural and Cognitive Psychotherapies (BABCP), <em>Cardiff</em></div>
+                    <p class="pub-details">Poster presentation of a qualitative study on the acceptability of remote cognitive remediation from the perspective of psychosis service users.</p>
+                  </article>
+
+                  <article class="pub">
+                    <div class="pub-title">2022 South London and Maudsley NHS Recovery College, <em>London</em></div>
+                    <p class="pub-details">Presented first-year PhD work on adolescent additional-language learning, evidence synthesis, and next-stage empirical plans.</p>
+                  </article>
+
+                  <article class="pub">
+                    <div class="pub-title">2021 UK Acquired Brain Injury Forum Coming out of Covid Conference, <em>Online</em></div>
+                    <p class="pub-details">Slides presentation of MSc dissertation, a qualitative study on therapists’ experiences of transitioning to remote-only delivery.</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <button class="accordion-trigger" type="button" aria-expanded="false">
+              <span class="accordion-title only-title">Media and Events (5)</span>
+              <span class="chevron" aria-hidden="true">⌄</span>
+            </button>
+
+            <div class="accordion-panel">
+              <div class="accordion-inner">
+                <div class="pub-list" aria-label="Selected media and events outputs">
+                  <article class="pub">
+                    <div class="pub-title">2026 BBC Radio Wales Dros Ginio interview</div>
+                    <p class="pub-details">Interviewed about my PhD on adolescent language learning, “Sut mae pobl ifanc yn dysgu iaith?”</p>
+                    <a href="https://www.bbc.co.uk/sounds/play/p0nmhqx6">Listen here</a>
+                    <a href="Transcript_of_BBC_Radio_Wales_Dros_Ginio_Interview.pdf">Read transcript here</a>
+                  </article>
+
+                  <article class="pub">
+                    <div class="pub-title">2026 Cambridge Science Festival</div>
+                    <p class="pub-details">Contributed to public-facing engagement around psychology and language learning.</p>
+                  </article>
+
+                  <article class="pub">
+                    <div class="pub-title">2021 BBC Radio Wales Dros Frecwast interview</div>
+                    <p class="pub-details">Interviewed about mental health among athletes and the importance of psychological support.</p>
+                  </article>
+
+                  <article class="pub">
+                    <div class="pub-title">2021 BBC Radio Wales Dros Frecwast interview</div>
+                    <p class="pub-details">Interviewed about my experience as an anxiety helpline volunteer during the Covid-19 pandemic.</p>
+                  </article>
+
+                  <article class="pub">
+                    <div class="pub-title">2019, 2021 Eisteddfod Genedlaethol</div>
+                    <p class="pub-details">Represented Bangor University’s School of Psychology, engaging the public and raising interest in psychology.</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <button class="accordion-trigger" type="button" aria-expanded="false">
+              <span class="accordion-title only-title">Teaching (4)</span>
+              <span class="chevron" aria-hidden="true">⌄</span>
+            </button>
+
+            <div class="accordion-panel">
+              <div class="accordion-inner">
+                <div class="pub-list" aria-label="Selected teaching outputs">
+                  <article class="pub">
+                    <div class="pub-title">2026 Cambridge Higher Aspirations Scheme</div>
+                    <p class="pub-details">Delivered a Psychology and Behavioural Sciences course consisting of five sessions and a final project to eight A-level students.</p>
+                  </article>
+
+                  <article class="pub">
+                    <div class="pub-title">2024–2025 King’s College London</div>
+                    <p class="pub-details">Co-developed the module and led two seminars on co-production and alternative research dissemination methods.</p>
+                  </article>
+
+                  <article class="pub">
+                    <div class="pub-title">2023 Maudsley Biomedical Research Centre</div>
+                    <p class="pub-details">Delivered training on patient and public involvement to healthcare professionals and academic researchers.</p>
+                  </article>
+
+                  <article class="pub">
+                    <div class="pub-title">2019–2021 Bangor University</div>
+                    <p class="pub-details">Led public speaking classes for undergraduate students at Bangor University, delivering three one-hour weekly classes of 25 students each year.</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="timeline" class="section section-bg-green">
-      <div class="section-inner">
-        <div class="section-head">
-          <div class="kicker">Selected milestones</div>
-
-          <div>
-            <h2>A few things I’m proud of</h2>
-          </div>
-        </div>
-
-        <div class="timeline">
-          <article class="timeline-item">
-            <div class="timeline-date">Funding</div>
-            <div>
-              <h3>Funding, scholarships, and recognition</h3>
-              <p>Received full ESRC CAM-DTP PhD funding, a KCL Employee Recognition Award (£1k), Bangor School of Psychology Achievement Scholarship (£1k; top 8 graduating students), and a James Pantyfedwen Foundation Grant (£5k).</p>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <div class="timeline-date">PPIE</div>
-            <div>
-              <h3>Person-centred and lived-experience research</h3>
-              <p>Led service user advisory panels, and worked on lived-experience, minority-language, theatre-based, and patient-centred research projects as a freelance consultant.</p>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <div class="timeline-date">Teaching</div>
-            <div>
-              <h3>Teaching, training, and widening participation</h3>
-              <p>Developed and delivered psychology teaching through KCL’s undergraduate PPIE module, Maudsley BRC PPI training, public speaking classes during my degree, and the Cambridge Higher Aspirations Scheme.</p>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <div class="timeline-date">Engagement</div>
-            <div>
-              <h3>Open research and community engagement</h3>
-              <p>Registered my PhD review on PROSPERO, contributed to Cambridge Science Festival 2026, and support CAM-DTP student engagement and community-building.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section section-bg-rosegreen">
+    <section id="contact" class="section section-bg-green">
       <div class="section-inner">
         <div class="section-head no-margin">
           <div class="kicker">Contact</div>
-
           <div>
             <h2>Let’s talk.</h2>
             <p class="lead">
-              If you’d like to discuss my work, opportunities to collaborate, or anything else, please feel free to get in touch - I’m always happy to chat about research, ideas, or potential projects.
+              If you’d like to discuss my work, opportunities to collaborate, or anything else, please feel free to get in touch. I’m always happy to chat about research, ideas, or potential projects.
             </p>
-
             <div class="hero-actions">
               <a class="button primary" href="mailto:lap68@cam.ac.uk">Email</a>
               <a class="button primary" href="https://www.linkedin.com/in/lois-parri/">LinkedIn</a>
@@ -893,6 +846,27 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.querySelectorAll(".accordion").forEach((accordion) => {
+      const trigger = accordion.querySelector(".accordion-trigger");
+      const panel = accordion.querySelector(".accordion-panel");
+
+      if (accordion.classList.contains("is-open")) {
+        panel.style.maxHeight = `${panel.scrollHeight}px`;
+      }
+
+      trigger.addEventListener("click", () => {
+        const isOpen = accordion.classList.toggle("is-open");
+        trigger.setAttribute("aria-expanded", String(isOpen));
+        panel.style.maxHeight = isOpen ? `${panel.scrollHeight}px` : "0px";
+      });
+    });
+
+    window.addEventListener("resize", () => {
+      document.querySelectorAll(".accordion.is-open .accordion-panel").forEach((panel) => {
+        panel.style.maxHeight = `${panel.scrollHeight}px`;
+      });
+    });
   </script>
 </body>
 </html>
