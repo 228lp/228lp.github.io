@@ -153,6 +153,7 @@ a:hover,.profile-links a:hover,footer a:hover{color:var(--ink);text-decoration-t
 .skip-link:hover{color:var(--cream);background:#4e4b30}
 .profile-links a>span,.contact-links a>span{text-decoration:inherit;text-underline-offset:inherit}
 @media(prefers-reduced-motion:reduce){a{transition:none}}
+.grc-extra-links[hidden],.myf-extra-links[hidden]{display:none}.grc-more-toggle,.myf-more-toggle{display:block;margin-top:10px;padding:0;border:0;background:none;color:var(--jungle);font:500 .78rem/1.75 'DM Sans','Helvetica Neue',Arial,sans-serif;text-decoration:underline;text-underline-offset:3px;cursor:pointer}.grc-more-toggle:hover,.myf-more-toggle:hover{color:var(--ink)}
 
 /* ---- Review changes ---- */
 html{scroll-padding-top:26px}
@@ -203,6 +204,7 @@ footer{font-size:.82rem!important;gap:6px 22px}
     </section>
     <section id="news" aria-labelledby="newsTitle">
       <h2 class="section-title" id="newsTitle">News</h2>
+      <p class="research-copy">Updates on my research, teaching, public engagement, and other recent activities. Scroll to see more...</p>
       <!-- Keep months and the updates within each month in reverse chronological order. -->
       <div class="news-scroll" role="region" tabindex="0" aria-label="News; scroll for older updates">
         <ol class="news-list">
@@ -290,6 +292,7 @@ footer{font-size:.82rem!important;gap:6px 22px}
     </section>
     <section id="outputs" aria-labelledby="outputsTitle">
       <h2 class="section-title" id="outputsTitle">Publications &amp; more</h2>
+      <p class="research-copy">A selection of my academic publications and wider research outputs, including conferences, teaching, media, and awards.</p>
       <div class="accordion-list">
 <details class="accordion" id="publications">
 <summary class="accordion-trigger"><span class="accordion-title">Publications (6)</span><span class="chevron" aria-hidden="true">+</span></summary>
@@ -361,7 +364,7 @@ footer{font-size:.82rem!important;gap:6px 22px}
 <article class="pub" id="inquisitas"><span class="role-period output-period">2026</span><div class="output-body"><div class="pub-title">Inquisitas lecture series</div><p class="pub-details">Upcoming: Created and delivered two talks for the <em>Inquisitas Autumn Lectures Series</em>: one for the Psychology series (topic: participatory research) and one for the Medical Ethics series (topic: ethics of digital interventions in mental health).</p></div></article>
 <article class="pub"><span class="role-period output-period">2026–<br>2027</span><div class="output-body"><div class="pub-title">Cambridge Higher Aspirations Scheme · Gonville and Caius College, Cambridge</div><p class="pub-details">Created and delivered five Psychology and Behavioural Sciences sessions and a final project to A-level students for Gonville and Caius College. Sessions lasted 90 minutes and covered foundational and applied topics within the field.</p></div></article>
 <article class="pub"><span class="role-period output-period">2024–<br>2025</span><div class="output-body"><div class="pub-title">PPIE module co-developer and seminar lead · King’s College London</div><p class="pub-details">Co-developed the new BSc module <em>Lived Experience in Mental Health Research</em>, devised the module topics and assessment, and delivered two seminars on co-production and creative research dissemination methods.</p></div></article>
-<article class="pub"><span class="role-period output-period">2023</span><div class="output-body"><div class="pub-title">PPIE Training for Clinicans and Researchers · Maudsley Biomedical Research Centre</div><p class="pub-details">Co-developed and co-led training on how to do patient and public involvement and engagement well to healthcare professionals and academic researchers every quarter, delivering monthly hour long sessions.</p></div></article>
+<article class="pub"><span class="role-period output-period">2023</span><div class="output-body"><div class="pub-title">PPIE Training for Clinicians and Researchers · Maudsley Biomedical Research Centre</div><p class="pub-details">Co-developed and co-led training on how to do patient and public involvement and engagement well to healthcare professionals and academic researchers, delivering monthly hour long sessions.</p></div></article>
 <article class="pub"><span class="role-period output-period">2019–<br>2021</span><div class="output-body"><div class="pub-title">Public speaking tutor · Bangor University</div><p class="pub-details">Led public speaking classes for undergraduate students at Bangor University, delivering three one-hour weekly classes of 25 students each year.</p></div></article>
 </div></div></div>
 </details>
@@ -384,7 +387,8 @@ footer{font-size:.82rem!important;gap:6px 22px}
 <div class="output-year-group" role="group" aria-labelledby="media-year-2024"><h3 class="role-period output-year-label" id="media-year-2024">2024</h3><div class="output-year-entries"><article class="pub" id="grc-research-explainers"><div class="output-body"><div class="pub-title">GRC research blog articles</div><p class="pub-details">Accessible and informative blog articles for Gibson Research Consultancy on research methods, academic critique, and patient-centered research.</p>
 <a href="https://www.grc-health.com/knowledge-centre/the-evolution-of-peer-review-in-academic-research">Peer review</a>
 <a href="https://www.grc-health.com/knowledge-centre/understanding-tokenism-in-patient-and-public-involvement-%28ppi%29-research">Understanding tokenism</a>
-<a href="https://www.grc-health.com/knowledge-centre/avoiding-tokenism-strategies-for-meaningful-involvement-in-patient-and-public-involvement-%28ppi%29-research">Meaningful involvement</a><a href="https://www.grc-health.com/knowledge-centre/artificial-intelligence-in-peer-review" target="_blank" rel="noopener noreferrer" title="Artificial Intelligence in Peer Review: Threats and Opportunities for Academic Journals">AI in peer review</a>
+<a href="https://www.grc-health.com/knowledge-centre/avoiding-tokenism-strategies-for-meaningful-involvement-in-patient-and-public-involvement-%28ppi%29-research">Meaningful involvement</a>
+<span class="grc-extra-links" id="grc-extra-links" hidden><a href="https://www.grc-health.com/knowledge-centre/artificial-intelligence-in-peer-review" target="_blank" rel="noopener noreferrer" title="Artificial Intelligence in Peer Review: Threats and Opportunities for Academic Journals">AI in peer review</a>
 <a href="https://www.grc-health.com/knowledge-centre/navigating-issues-in-peer-review" target="_blank" rel="noopener noreferrer" title="Navigating Issues in Peer Review: Challenges and Considerations">Peer review challenges</a>
 <a href="https://www.grc-health.com/knowledge-centre/becoming-lived-experience-researcher" target="_blank" rel="noopener noreferrer" title="Becoming a Lived Experience Researcher – Or, in Layman’s Terms, Putting the Psycho in Psychology">Becoming a lived experience researcher</a>
 <a href="https://www.grc-health.com/knowledge-centre/the-history-of-lived-experience-research-and-patient-and-public-involvement" target="_blank" rel="noopener noreferrer" title="The History of Lived Experience Research and Patient and Public Involvement">History of lived experience research</a>
@@ -398,17 +402,21 @@ footer{font-size:.82rem!important;gap:6px 22px}
 <a href="https://www.grc-health.com/knowledge-centre/exploring-research-design-the-grand-heist-s-blueprint" target="_blank" rel="noopener noreferrer" title="Exploring Research Design: The Grand Heist’s Blueprint">Research design</a>
 <a href="https://www.grc-health.com/knowledge-centre/mixed-methods-in-research-bridging-numbers-and-narratives" target="_blank" rel="noopener noreferrer" title="Mixed-Methods in Research: Bridging Numbers and Narratives">Mixed methods</a>
 <a href="https://www.grc-health.com/knowledge-centre/why-does-informed-consent-matter" target="_blank" rel="noopener noreferrer" title="Why Does Informed Consent Matter?">Why informed consent matters</a>
-<a href="https://www.grc-health.com/knowledge-centre/5-tips-for-achieving-truly-informed-consent-in-research" target="_blank" rel="noopener noreferrer" title="5 Tips for Achieving Truly Informed Consent in Research">Informed consent tips</a>
+<a href="https://www.grc-health.com/knowledge-centre/5-tips-for-achieving-truly-informed-consent-in-research" target="_blank" rel="noopener noreferrer" title="5 Tips for Achieving Truly Informed Consent in Research">Informed consent tips</a></span>
+<button class="grc-more-toggle" type="button" aria-expanded="false" aria-controls="grc-extra-links">Click to see more...</button>
 </div></article><article class="pub" id="circuits-research-blogs"><div class="output-body"><div class="pub-title">CIRCuiTS™ research blog articles</div><p class="pub-details">Two articles for CIRCuiTS™, sharing findings on the delivery and acceptability of remote cognitive remediation for people with psychosis.</p>
 <a href="https://www.circuitstherapyinfo.com/post/delivering-cognitive-remediation-remotely">Remote delivery</a>
 <a href="https://www.circuitstherapyinfo.com/post/what-do-people-with-psychosis-think-of-remote-cognitive-remediation-therapy">Service users’ perspectives</a></div></article></div></div><div class="output-year-group" role="group" aria-labelledby="media-year-2023"><h3 class="role-period output-year-label" id="media-year-2023">2023</h3><div class="output-year-entries"><article class="pub" id="myf-articles"><div class="output-body"><div class="pub-title">Student mental-health blog articles</div><p class="pub-details">Eight blog articles for Myf.Cymru, covering various mental-health topics for students, including phobias, panic attacks, negative thoughts and sleep.</p>
 <a href="https://myf.cymru/cy/Ffug_Gredoau_am_ffobi%C3%A2u">Phobia myths</a>
 <a href="https://myf.cymru/cy/Cefnogi_Teulu_a_Ffrindiau_Sydd_Ffobia">Supporting others</a>
 <a href="https://myf.cymru/cy/Sut_I_Ymdopi_A_Goresgyn_Pwl_O_Banig">Coping with panic</a>
+<span class="myf-extra-links" id="myf-extra-links" hidden>
 <a href="https://myf.cymru/cy/Symptomau_Annisgwyl_ond_Arferol_Pwl_O_Banig">Panic symptoms</a>
 <a href="https://myf.cymru/cy/PANIG_ydw_i_wedi_cymryd_cam_yn_%C3%B4l">Setbacks</a>
 <a href="https://myf.cymru/cy/Goresgyn_Meddyliau_Negyddol">Negative thoughts</a>
-<a href="https://myf.cymru/cy/Sut_I_Gael_Gwell_Cwsg">Better sleep</a></div></article></div></div><div class="output-year-group" role="group" aria-labelledby="media-year-2021"><h3 class="role-period output-year-label" id="media-year-2021">2021</h3><div class="output-year-entries"><article class="pub" id="no-panic-video"><div class="output-body"><div class="pub-title">Panic-attack Q&amp;A video</div><p class="pub-details">Contributed lived-experience perspectives to an anxiety and panic-attack awareness video for No Panic.</p>
+<a href="https://myf.cymru/cy/Sut_I_Gael_Gwell_Cwsg">Better sleep</a></span>
+<button class="myf-more-toggle" type="button" aria-expanded="false" aria-controls="myf-extra-links">Click to see more...</button>
+</div></article></div></div><div class="output-year-group" role="group" aria-labelledby="media-year-2021"><h3 class="role-period output-year-label" id="media-year-2021">2021</h3><div class="output-year-entries"><article class="pub" id="no-panic-video"><div class="output-body"><div class="pub-title">Panic-attack Q&amp;A video</div><p class="pub-details">Contributed lived-experience perspectives to an anxiety and panic-attack awareness video for No Panic.</p>
 <a href="https://www.youtube.com/watch?v=E4fLEUYGnso">Watch the video</a></div></article><article class="pub"><div class="output-body">
 <div class="pub-title">BBC Radio Cymru interview: mental health in sport</div>
 <p class="pub-details">Interviewed about mental health among athletes and the importance of psychological support on the <em>Dros Frecwast</em> show.</p>
@@ -424,7 +432,7 @@ footer{font-size:.82rem!important;gap:6px 22px}
 </div></div>
 </div></div></div>
 </details>
-<details class="accordion" id="awards"><summary class="accordion-trigger"><span class="accordion-title">Awards &amp; funding (8)</span><span class="chevron" aria-hidden="true">+</span></summary><div class="accordion-panel"><div class="accordion-inner"><ol class="award-list outputs-awards"><li id="charles-slater-fund"><span class="role-period award-period">2026</span><div><div class="award-heading"><span class="award-name">Charles Slater Fund conference grant</span><span class="award-amount">£270</span></div><span class="award-provider">University of Cambridge</span><p class="award-description">Awarded to support attendance and poster presentation at the Society for the Neurobiology of Language (SNL) conference in Geneva.</p></div></li><li><span class="role-period award-period">2026</span><div><div class="award-heading"><span class="award-name">Participatory Research Fund</span><span class="award-amount">£580</span></div><span class="award-provider">School of Biological Sciences, University of Cambridge</span><p class="award-description">Awarded to facilitate nine young people’s involvement in an Adolescent Advisory Group to help shape my PhD research.</p></div></li><li><span class="role-period award-period">2025</span><div><div class="award-heading"><span class="award-name">ESRC CAM-DTP doctoral studentship</span><span class="award-amount">Full funding for 4.75 years</span></div><span class="award-provider">University of Cambridge</span><p class="award-description">Awarded through competitive selection following departmental nomination; covers PhD tuition fees, a living stipend, and a research support grant.</p></div></li><li><span class="role-period award-period">2023</span><div><div class="award-heading"><span class="award-name">Employee Recognition Award</span><span class="award-amount">£1,000</span></div><span class="award-provider">King’s College London</span><p class="award-description">Recognition for outstanding contributions to the research lab during my work as a research assistant.</p></div></li><li><span class="role-period award-period">2020</span><div><div class="award-heading"><span class="award-name">James Pantyfedwen Foundation grant</span><span class="award-amount">£5,000</span></div><p class="award-description">Postgraduate tuition-fee support for my MSc in Clinical and Health Psychology, recognising academic achievement and potential contribution to the field.</p></div></li><li><span class="role-period award-period">2020</span><div><div class="award-heading"><span class="award-name">School of Psychology Achievement Scholarship</span><span class="award-amount">£1,000</span></div><span class="award-provider">Bangor University</span><p class="award-description">Postgraduate tuition-fee support, awarded to the top ten graduating students from my undergraduate Psychology degree.</p></div></li><li id="coleg-cymraeg-scholarship"><span class="role-period award-period">2017</span><div><div class="award-heading"><span class="award-name">Incentive Scholarship</span><span class="award-amount">£1,500</span></div><span class="award-provider">Coleg Cymraeg Cenedlaethol</span><p class="award-description">Support for Welsh-medium undergraduate study at Bangor University, worth £500 per year for three years.</p></div></li><li id="entrance-scholarship"><span class="role-period award-period">2017</span><div><div class="award-heading"><span class="award-name">Entrance Scholarship</span><span class="award-amount">£1,000</span></div><span class="award-provider">Bangor University</span><p class="award-description">Undergraduate tuition-fee support, awarded to the ten highest scorers in Bangor University’s Entrance Scholarship Examination, assessed during my A-Level studies.</p></div></li></ol></div></div></details>
+<details class="accordion" id="awards"><summary class="accordion-trigger"><span class="accordion-title">Awards &amp; funding (6)</span><span class="chevron" aria-hidden="true">+</span></summary><div class="accordion-panel"><div class="accordion-inner"><ol class="award-list outputs-awards"><li id="charles-slater-fund"><span class="role-period award-period">2026</span><div><div class="award-heading"><span class="award-name">Charles Slater Fund conference grant</span><span class="award-amount">£270</span></div><span class="award-provider">University of Cambridge</span><p class="award-description">Awarded to support attendance and poster presentation at the Society for the Neurobiology of Language (SNL) conference in Geneva.</p></div></li><li><span class="role-period award-period">2026</span><div><div class="award-heading"><span class="award-name">Participatory Research Fund</span><span class="award-amount">£580</span></div><span class="award-provider">School of Biological Sciences, University of Cambridge</span><p class="award-description">Awarded to facilitate nine young people’s involvement in an Adolescent Advisory Group to help shape my PhD research.</p></div></li><li><span class="role-period award-period">2025</span><div><div class="award-heading"><span class="award-name">ESRC CAM-DTP doctoral studentship</span><span class="award-amount">Full funding for 4.75 years</span></div><span class="award-provider">University of Cambridge</span><p class="award-description">Awarded through competitive selection following departmental nomination; covers PhD tuition fees, a living stipend, and a research support grant.</p></div></li><li><span class="role-period award-period">2023</span><div><div class="award-heading"><span class="award-name">Employee Recognition Award</span><span class="award-amount">£1,000</span></div><span class="award-provider">King’s College London</span><p class="award-description">Recognition for outstanding contributions to the research lab during my work as a research assistant.</p></div></li><li><span class="role-period award-period">2020</span><div><div class="award-heading"><span class="award-name">James Pantyfedwen Foundation grant</span><span class="award-amount">£5,000</span></div><p class="award-description">Postgraduate tuition-fee support for my MSc in Clinical and Health Psychology, recognising academic achievement and potential contribution to the field.</p></div></li><li><span class="role-period award-period">2020</span><div><div class="award-heading"><span class="award-name">School of Psychology Achievement Scholarship</span><span class="award-amount">£1,000</span></div><span class="award-provider">Bangor University</span><p class="award-description">Postgraduate tuition-fee support, awarded to the top ten graduating students from my undergraduate Psychology degree.</p></div></li></ol></div></div></details>
       </div>
     </section>
     <section id="contact" class="contact-section" aria-labelledby="contactTitle">
@@ -475,6 +483,22 @@ footer{font-size:.82rem!important;gap:6px 22px}
   });
   window.addEventListener('afterprint', () => dets.forEach((d, i) => { d.open = wasOpen[i]; }));
   $('#year').textContent = new Date().getFullYear();
+  const revealGroups = [
+    ['grc-extra-links', '.grc-more-toggle'],
+    ['myf-extra-links', '.myf-more-toggle']
+  ];
+  revealGroups.forEach(([extraId, toggleSelector]) => {
+    const extraLinks = $(`#${extraId}`);
+    const toggle = $(toggleSelector);
+    if (extraLinks && toggle) {
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        extraLinks.hidden = expanded;
+        toggle.textContent = expanded ? 'Click to see more...' : 'Show fewer';
+      });
+    }
+  });
 })();
 </script>
 </body>
